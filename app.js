@@ -9,10 +9,6 @@ const cookieParser = require("cookie-parser")
 
 const port = process.env.PORT || 8080
 
-// app.get("/", (req, res) => {
-//     res.status(201).json("server created")
-// })
-
 // frontend will run on 3000 port and backend will run on 8080 port. So, whenever we will send data it will throw an error called 'Cross-Origin Resourse Sharing'
 app.use(cors())
 app.use(express.json())
