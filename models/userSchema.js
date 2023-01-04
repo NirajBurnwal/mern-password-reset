@@ -3,7 +3,7 @@ const validator = require('validator')
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 
-const keysecret = "nirajkumarburnwallearningmernst"
+const keysecret = process.env.SECRET_KEY
 
 const userSchema = new mongoose.Schema({
     fname: {
@@ -38,7 +38,10 @@ const userSchema = new mongoose.Schema({
                 required: true
             }
         }
-    ]
+    ],
+    verifytoken: {
+        type: String,
+    }
 })
 
 // hashing password 
